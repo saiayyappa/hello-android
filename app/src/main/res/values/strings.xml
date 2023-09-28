@@ -3,4 +3,5 @@
     <string name="title_activity_simple_calc">SimpleCalc</string>
     <string name="title_activity_bmicalc">BMICalc</string>
     <string name="title_activity_insta_form">InstaForm</string>
+    <string name="title_activity_constraint_layout_example">ConstraintLayoutExample</string>
 </resources>

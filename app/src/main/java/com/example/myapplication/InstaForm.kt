@@ -240,7 +240,6 @@ fun InstaFormScreen(modifier: Modifier = Modifier) {
         fontSize = 16.sp
       )
     }
-
   }
 }
 

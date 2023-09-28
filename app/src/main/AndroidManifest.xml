@@ -13,6 +13,11 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ConstraintLayoutExample"
+            android:exported="false"
+            android:label="@string/title_activity_constraint_layout_example"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
             android:name=".InstaForm"
             android:exported="false"
             android:label="@string/title_activity_insta_form"
