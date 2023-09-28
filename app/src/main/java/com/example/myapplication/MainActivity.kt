@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -176,7 +177,7 @@ class MainActivity : ComponentActivity() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Preview
 @Composable
-fun fbScreen() {
+fun FbScreen() {
   var a by remember {
     mutableStateOf("")
   }
@@ -213,6 +214,8 @@ fun fbScreen() {
       modifier = Modifier.fillMaxWidth()
     )
 
+    Divider()
+
     Row(
       horizontalArrangement = Arrangement.SpaceEvenly,
       modifier = Modifier
@@ -220,7 +223,7 @@ fun fbScreen() {
         .padding(2.dp)
     ) {
       TextField(value = a,
-        onValueChange = {},
+        onValueChange = { a = it },
         placeholder = { Text(text = "First name") },
         modifier = Modifier
           .padding(top = 10.dp, bottom = 10.dp, end = 5.dp)
@@ -228,7 +231,7 @@ fun fbScreen() {
 //          .border(1.dp ,Color.LightGray, RoundedCornerShape(10.dp))
       )
       TextField(value = b,
-        onValueChange = {},
+        onValueChange = { b = it },
         placeholder = { Text(text = "Surname") },
         modifier = Modifier
           .padding(top = 10.dp, bottom = 10.dp, start = 5.dp)

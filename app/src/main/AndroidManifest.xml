@@ -13,6 +13,21 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".InstaForm"
+            android:exported="false"
+            android:label="@string/title_activity_insta_form"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".BMICalc"
+            android:exported="false"
+            android:label="@string/title_activity_bmicalc"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".SimpleCalc"
+            android:exported="false"
+            android:label="@string/title_activity_simple_calc"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"

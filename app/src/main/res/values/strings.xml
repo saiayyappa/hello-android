@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="title_activity_simple_calc">SimpleCalc</string>
+    <string name="title_activity_bmicalc">BMICalc</string>
+    <string name="title_activity_insta_form">InstaForm</string>
 </resources>
