@@ -13,6 +13,11 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".NavScreenExercise2809"
+            android:exported="false"
+            android:label="@string/title_activity_nav_screen_exercise2809"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
             android:name=".LoginScreenNav"
             android:exported="false"
             android:label="@string/title_activity_login_screen_nav"
