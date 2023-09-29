@@ -13,6 +13,11 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".ScaffoldSample"
+            android:exported="false"
+            android:label="@string/title_activity_scaffold_sample"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
             android:name=".NavScreenExercise2809"
             android:exported="false"
             android:label="@string/title_activity_nav_screen_exercise2809"
@@ -31,11 +36,6 @@
             android:name=".QuizApp2"
             android:exported="false"
             android:label="@string/title_activity_quiz_app2"
-            android:theme="@style/Theme.MyApplication" />
-        <activity
-            android:name=".NavEx"
-            android:exported="false"
-            android:label="@string/title_activity_nav_ex"
             android:theme="@style/Theme.MyApplication" />
         <activity
             android:name=".QuizApp"

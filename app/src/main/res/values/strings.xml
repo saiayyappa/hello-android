@@ -11,4 +11,5 @@
     <string name="title_activity_constraint_layout_ex">ConstraintLayoutEx</string>
     <string name="title_activity_login_screen_nav">LoginScreenNav</string>
     <string name="title_activity_nav_screen_exercise2809">NavScreenExercise2809</string>
+    <string name="title_activity_scaffold_sample">ScaffoldSample</string>
 </resources>

@@ -6,7 +6,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
@@ -187,7 +186,8 @@ fun ConstraintExample() {
     Button(
       onClick = { /*TODO*/ },
       colors = ButtonDefaults.buttonColors(Color(0xFF2290EE)),
-      modifier = Modifier.layoutId("buttonLogin")
+      modifier = Modifier
+        .layoutId("buttonLogin")
         .padding(bottom = 20.dp),
       shape = RoundedCornerShape(8.dp)
     ) {
@@ -245,7 +245,6 @@ fun ConstraintExample() {
     ) {
       Text(text = "Sign up")
     }
-
     HyperlinkText(
       fullText = "People who use our service may have uploaded your contact information to Instagram. Learn More",
       hyperLinks = mutableMapOf(
@@ -257,7 +256,9 @@ fun ConstraintExample() {
       ),
       linkTextColor = Color(0xFF01376A),
       fontSize = 14.sp,
-      modifier = Modifier.padding(top = 5.dp, bottom = 10.dp).layoutId("textContact")
+      modifier = Modifier
+        .padding(top = 5.dp, bottom = 10.dp)
+        .layoutId("textContact")
     )
     HyperlinkText(
       fullText = "By signing up, you agree to our Terms, Privacy Policy and Cookies Policy.",
@@ -272,7 +273,9 @@ fun ConstraintExample() {
       ),
       linkTextColor = Color(0xFF01376A),
       fontSize = 14.sp,
-      modifier = Modifier.padding(top = 5.dp, bottom = 10.dp).layoutId("textPrivacy")
+      modifier = Modifier
+        .padding(top = 5.dp, bottom = 10.dp)
+        .layoutId("textPrivacy")
     )
   }
 }
