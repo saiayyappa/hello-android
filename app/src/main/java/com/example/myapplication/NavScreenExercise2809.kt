@@ -87,13 +87,13 @@ fun MainScreen(context: Context, navController: NavController) {
     verticalArrangement = Arrangement.Center,
     horizontalAlignment = Alignment.CenterHorizontally
   ) {
-    OutlinedTextField(
-      value = name, onValueChange = { name = it },
+    OutlinedTextField(value = name,
+      onValueChange = { name = it },
       placeholder = { Text(text = "Name") },
       modifier = Modifier.padding(2.dp)
     )
-    OutlinedTextField(
-      value = mobile, onValueChange = { mobile = it },
+    OutlinedTextField(value = mobile,
+      onValueChange = { mobile = it },
       placeholder = { Text(text = "Mobile") },
       modifier = Modifier.padding(2.dp)
     )
@@ -126,7 +126,7 @@ fun MainScreen(context: Context, navController: NavController) {
           showPopup = true
         }
       }) {
-        Text(text = "TO")
+        Text(text = "Toast")
       }
       Button(onClick = {
         if (checked && name.trim().isNotEmpty() && mobile.trim().isNotEmpty()) {
@@ -159,7 +159,9 @@ fun MainScreen(context: Context, navController: NavController) {
     }
     if (showTv) {
       Column(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+          .fillMaxWidth()
+          .padding(0.dp, 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally
       ) {
         Text(text = "TV Output:")
@@ -167,20 +169,18 @@ fun MainScreen(context: Context, navController: NavController) {
       }
     }
     if (showPopup) {
-      AlertDialog(
-        onDismissRequest = { showPopup = false },
+      val closePopup = { showPopup = false };
+      AlertDialog(onDismissRequest = closePopup,
         title = { Text(text = popupTitle) },
         text = { Text(text = popupDesc) },
         confirmButton = {
-          Button(onClick = { showPopup = false }) {
+          Button(onClick = closePopup) {
             Text(text = "OK")
           }
-        }
-      )
+        })
     }
   }
 }
-
 
 @Composable
 fun TVScreen(name: String = "name", mobile: String = "mobile") {
