@@ -12,4 +12,6 @@
     <string name="title_activity_login_screen_nav">LoginScreenNav</string>
     <string name="title_activity_nav_screen_exercise2809">NavScreenExercise2809</string>
     <string name="title_activity_scaffold_sample">ScaffoldSample</string>
+    <string name="title_activity_nav_drawer_ex">NavDrawerEx</string>
+    <string name="title_activity_navbar_ex">NavbarEx</string>
 </resources>
