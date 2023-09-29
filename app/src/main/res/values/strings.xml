@@ -4,4 +4,10 @@
     <string name="title_activity_bmicalc">BMICalc</string>
     <string name="title_activity_insta_form">InstaForm</string>
     <string name="title_activity_constraint_layout_example">ConstraintLayoutExample</string>
+    <string name="title_activity_higher_order_fn_ex">HigherOrderFnEx</string>
+    <string name="title_activity_quiz_app">QuizApp</string>
+    <string name="title_activity_nav_ex">NavEx</string>
+    <string name="title_activity_quiz_app2">QuizApp2</string>
+    <string name="title_activity_constraint_layout_ex">ConstraintLayoutEx</string>
+    <string name="title_activity_login_screen_nav">LoginScreenNav</string>
 </resources>

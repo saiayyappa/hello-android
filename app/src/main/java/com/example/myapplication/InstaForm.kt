@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -115,6 +116,7 @@ fun HyperlinkText(
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
+@Preview(showBackground = true)
 @Composable
 fun InstaFormScreen(modifier: Modifier = Modifier) {
   var email by remember {
@@ -158,12 +160,13 @@ fun InstaFormScreen(modifier: Modifier = Modifier) {
         modifier = Modifier.padding(start = 8.dp)
       )
     }
-    Column(
-      horizontalAlignment = Alignment.CenterHorizontally,
-      verticalArrangement = Arrangement.Center,
-      modifier = Modifier.padding(bottom = 20.dp)
+    Row(
+      modifier = Modifier.padding(bottom = 20.dp),
+      horizontalArrangement = Arrangement.Center,
+      verticalAlignment = Alignment.CenterVertically
     ) {
-//      Text(text = "OR")
+      Divider()
+      Text(text = "OR")
       Divider()
     }
     Column(

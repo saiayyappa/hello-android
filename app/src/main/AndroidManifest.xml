@@ -13,6 +13,36 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".LoginScreenNav"
+            android:exported="false"
+            android:label="@string/title_activity_login_screen_nav"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".ConstraintLayoutEx"
+            android:exported="false"
+            android:label="@string/title_activity_constraint_layout_ex"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".QuizApp2"
+            android:exported="false"
+            android:label="@string/title_activity_quiz_app2"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".NavEx"
+            android:exported="false"
+            android:label="@string/title_activity_nav_ex"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".QuizApp"
+            android:exported="false"
+            android:label="@string/title_activity_quiz_app"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".HigherOrderFnEx"
+            android:exported="false"
+            android:label="@string/title_activity_higher_order_fn_ex"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
             android:name=".ConstraintLayoutExample"
             android:exported="false"
             android:label="@string/title_activity_constraint_layout_example"
