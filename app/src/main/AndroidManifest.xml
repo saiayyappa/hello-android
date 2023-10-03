@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +19,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
+        <activity
+            android:name=".ThirdPartyLibEx"
+            android:exported="false"
+            android:label="@string/title_activity_third_party_lib_ex"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".WorkerEx"
+            android:exported="true"
+            android:label="@string/title_activity_worker_ex"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewModelEx"
+            android:exported="false"
+            android:label="@string/title_activity_view_model_ex"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".LifeCycleEx"
+            android:exported="true"
+            android:label="@string/title_activity_life_cycle_ex"
+            android:theme="@style/Theme.MyApplication">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".NotificationEx"
+            android:exported="false"
+            android:label="@string/title_activity_notification_ex"
+            android:theme="@style/Theme.MyApplication" />
         <activity
             android:name=".LazyColumnEx"
             android:exported="false"
@@ -82,11 +128,13 @@
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.MyApplication">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 

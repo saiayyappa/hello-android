@@ -15,4 +15,9 @@
     <string name="title_activity_nav_drawer_ex">NavDrawerEx</string>
     <string name="title_activity_navbar_ex">NavbarEx</string>
     <string name="title_activity_lazy_column_ex">LazyColumnEx</string>
+    <string name="title_activity_notification_ex">NotificationEx</string>
+    <string name="title_activity_life_cycle_ex">LifeCycleEx</string>
+    <string name="title_activity_view_model_ex">ViewModelEx</string>
+    <string name="title_activity_worker_ex">WorkerEx</string>
+    <string name="title_activity_third_party_lib_ex">ThirdPartyLibEx</string>
 </resources>
