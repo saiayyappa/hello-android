@@ -20,6 +20,21 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".LiveDataExercise"
+            android:exported="false"
+            android:label="@string/title_activity_live_data_exercise"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".LiveDataEx"
+            android:exported="false"
+            android:label="@string/title_activity_live_data_ex"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
+            android:name=".PeriodicWorkerEx"
+            android:exported="false"
+            android:label="@string/title_activity_periodic_worker_ex"
+            android:theme="@style/Theme.MyApplication" />
+        <activity
             android:name=".ThirdPartyLibEx"
             android:exported="false"
             android:label="@string/title_activity_third_party_lib_ex"

@@ -20,4 +20,7 @@
     <string name="title_activity_view_model_ex">ViewModelEx</string>
     <string name="title_activity_worker_ex">WorkerEx</string>
     <string name="title_activity_third_party_lib_ex">ThirdPartyLibEx</string>
+    <string name="title_activity_periodic_worker_ex">PeriodicWorkerEx</string>
+    <string name="title_activity_live_data_ex">LiveDataEx</string>
+    <string name="title_activity_live_data_exercise">LiveDataExercise</string>
 </resources>
