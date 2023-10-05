@@ -23,4 +23,5 @@
     <string name="title_activity_periodic_worker_ex">PeriodicWorkerEx</string>
     <string name="title_activity_live_data_ex">LiveDataEx</string>
     <string name="title_activity_live_data_exercise">LiveDataExercise</string>
+    <string name="title_activity_room_dbex">RoomDBEx</string>
 </resources>
