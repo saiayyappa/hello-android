@@ -10,8 +10,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -53,7 +51,6 @@ fun RoomDBExSample() {
     modifier = Modifier
       .padding(16.dp)
       .fillMaxSize()
-      .verticalScroll(rememberScrollState())
   ) {
     val applicationContext = LocalContext.current
     val database = UserDatabase.getDatabase(applicationContext)
@@ -61,6 +58,7 @@ fun RoomDBExSample() {
     var saveState by remember { mutableStateOf(false) }
     var retrieveState by remember { mutableStateOf(false) }
     var deleteState by remember { mutableStateOf(false) }
+    var updateState by remember { mutableStateOf(false) }
 
     var username by remember { mutableStateOf("") }
     var bloodGroup by remember { mutableStateOf("") }
@@ -82,8 +80,10 @@ fun RoomDBExSample() {
               firstName = username, bloodGroup = bloodGroup
             )
           )
+          println("to db: $username $bloodGroup")
           Toast.makeText(applicationContext, "Saved to db", Toast.LENGTH_SHORT).show()
         } catch (ex: Exception) {
+          println("Exception: $ex")
           Toast.makeText(applicationContext, "Saved to db failed", Toast.LENGTH_SHORT).show()
         }
       }
@@ -93,6 +93,7 @@ fun RoomDBExSample() {
       LaunchedEffect(scope) {
         try {
           userData = userDao.getUserInfo()
+          println("userData retrieve: $userData")
 
         } catch (ex: Exception) {
           println("user info retrieve failed")
@@ -110,6 +111,20 @@ fun RoomDBExSample() {
       }
     }
 
+    if (updateState) {
+      LaunchedEffect(scope) {
+        try {
+          userDao.updateUserInfo(
+            User(
+              uid = 3, firstName = "Ranjith", bloodGroup = "B+"
+            )
+          )
+        } catch (ex: Exception) {
+          println("user info update failed")
+        }
+      }
+    }
+
     OutlinedTextField(value = username, onValueChange = { username = it }, modifier, placeholder = {
       Text(text = "Enter username")
     })
@@ -121,20 +136,23 @@ fun RoomDBExSample() {
       })
     Button(onClick = {
       saveState = !saveState
-      username = ""
-      bloodGroup = ""
     }, modifier) {
       Text(text = "Save")
     }
     Button(onClick = { retrieveState = !retrieveState }, modifier) {
       Text(text = "Retrieve")
     }
-    if (!userData.isNullOrEmpty()) {
+    if (retrieveState && !userData.isNullOrEmpty()) {
+      println("userData: $userData")
       LazyColumn {
         items(userData!!) {
+          println("it: $it")
           Text(text = "\tUsername: ${it.firstName}, BloodGroup: ${it.bloodGroup}  \n\n")
         }
       }
+    }
+    Button(onClick = { updateState = !updateState }, modifier) {
+      Text(text = "Update uid 3 to Ranjith B+")
     }
     OutlinedTextField(value = deleteId, onValueChange = { deleteId = it }, modifier, placeholder = {
       Text(text = "Enter id to delete")

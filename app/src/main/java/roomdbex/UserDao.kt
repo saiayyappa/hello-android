@@ -11,12 +11,12 @@ interface UserDao {
   suspend fun getUserInfo(): List<User>?
 
   @Insert
-  fun insertUserInfo(user: User)
+  suspend fun insertUserInfo(user: User)
 
   @Update
-  fun updateUserInfo(user: User)
+  suspend fun updateUserInfo(user: User)
 
   @Query("DELETE FROM user_info WHERE uid = :uid")
-  fun deleteUserInfo(uid: Int)
+  suspend fun deleteUserInfo(uid: Int)
 
 }
